@@ -54,6 +54,7 @@ const HeroesList = () => {
      // Track the action chain actions => reducers
      const onDelete = useCallback((id) => {
         // Deleting a character by to id
+        
         request(`http://localhost:3001/heroes/${id}`, "DELETE")
             .then(data => console.log(data, 'Deleted'))
             .then(dispatch(heroDeleted(id)))
