@@ -1,12 +1,6 @@
 {
   "heroes": [
     {
-      "id": 1,
-      "name": "Перший герой",
-      "description": "Перший герой в рейтингу!",
-      "element": "fire"
-    },
-    {
       "id": 2,
       "name": "Невідомий герой",
       "description": "Той, що ховається в тіні",
@@ -25,10 +19,10 @@
       "element": "earth"
     },
     {
-      "id": "0296c44f-46bf-4f97-a461-81e8f7d0157b",
-      "name": "ggg",
-      "description": "ggg",
-      "element": "water"
+      "id": "282fdeda-77d8-47cb-9674-e25d89a5fb08",
+      "name": "ааа",
+      "description": "ааа",
+      "element": "fire"
     }
   ],
   "filters": [
