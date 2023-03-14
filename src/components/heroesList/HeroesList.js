@@ -5,7 +5,7 @@ import { CSSTransition, TransitionGroup} from 'react-transition-group';
 import { createSelector } from '@reduxjs/toolkit';
 
 //import { fetchHeroes } from '../../actions';
-import {heroDeleted, fetchHeroes} from './heroesSlice';
+import {heroDeleted, fetchHeroes, selectAll} from './heroesSlice';
 
 
 import HeroesListItem from "../heroesListItem/HeroesListItem";
@@ -22,7 +22,8 @@ const HeroesList = () => {
 
     const filterHeroesSelector = createSelector(
         (state) => state.filters.activeFilter,
-        (state) => state.heroes.heroes,
+        //(state) => state.heroes.heroes,
+        selectAll,
         (filter, heroes) => {
             if (filter === 'all') {
                 return heroes;
