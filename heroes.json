@@ -13,34 +13,39 @@
       "element": "water"
     },
     {
-      "id": "6dc4b603-bf3d-40aa-bccb-f2601d67fc3c",
+      "id": "08df1abf-56a8-45c0-a80e-136b113e79ea",
       "name": "Ірина Сергіївна Шумна",
-      "description": "супер",
+      "description": "kkk",
       "element": "fire"
     }
   ],
   "filters": [
     {
+      "id": "all",
       "name": "all",
       "label": "Все",
       "className": "btn-outline-dark"
     },
     {
+      "id": "fire",
       "name": "fire",
       "label": "Вогонь",
       "className": "btn-danger"
     },
     {
+      "id": "water",
       "name": "water",
       "label": "Вода",
       "className": "btn-primary"
     },
     {
+      "id": "wind",
       "name": "wind",
       "label": "Вітер",
       "className": "btn-success"
     },
     {
+      "id": "earth",
       "name": "earth",
       "label": "Земля",
       "className": "btn-secondary"

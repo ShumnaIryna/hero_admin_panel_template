@@ -2,7 +2,9 @@ import {useHttp} from '../../hooks/http.hook';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
+import store from '../../store';
 
+import { selectAll } from '../heroesFilters/filtersSlice';
 import { heroCreated } from '../heroesList/heroesSlice';
 
 // Task for this component:
@@ -21,7 +23,8 @@ const HeroesAddForm = () => {
     const [heroDescr, setHeroDescr] = useState('');
     const [heroElement, setHeroElement] = useState('');
 
-    const {filters, filtersLoadingStatus} = useSelector(state => state.filters);
+    const {filtersLoadingStatus} = useSelector(state => state.filters);
+    const filters = selectAll(store.getState());
     const dispatch = useDispatch();
     const {request} = useHttp();
 
@@ -102,7 +105,7 @@ const HeroesAddForm = () => {
                     name="element"
                     value={heroElement}
                     onChange={(e) => setHeroElement(e.target.value)}>
-                    <option >Я володію елементом...</option>
+                    <option value="">Я володію елементом...</option>
 
                     {renderFilters(filters, filtersLoadingStatus)}
 

@@ -2,10 +2,10 @@ import {useHttp} from '../../hooks/http.hook';
 import { useEffect, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { CSSTransition, TransitionGroup} from 'react-transition-group';
-import { createSelector } from '@reduxjs/toolkit';
+//import { createSelector } from '@reduxjs/toolkit';
 
 //import { fetchHeroes } from '../../actions';
-import {heroDeleted, fetchHeroes, selectAll} from './heroesSlice';
+import {heroDeleted, fetchHeroes, filterHeroesSelector} from './heroesSlice';
 
 
 import HeroesListItem from "../heroesListItem/HeroesListItem";
@@ -19,19 +19,6 @@ import './heroesList.scss';
 // Deletion also comes from the json file using the DELETE method
 
 const HeroesList = () => {
-
-    const filterHeroesSelector = createSelector(
-        (state) => state.filters.activeFilter,
-        //(state) => state.heroes.heroes,
-        selectAll,
-        (filter, heroes) => {
-            if (filter === 'all') {
-                return heroes;
-            } else {
-                return heroes.filter(item => item.element === filter)
-            }  
-        }
-    );
 
     // const filteredHeroes = useSelector(state => {
     //     if (state.filters.activeFilter === 'all') {
